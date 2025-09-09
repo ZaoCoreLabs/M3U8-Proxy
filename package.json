@@ -9,7 +9,7 @@
     "prettier": "2.8.8"
   },
   "name": "m3u8-proxy",
-  "description": "Proxy m3u8 files through pure JavaScript.",
+  "description": "Proxy m3u8 files through pure JavaScript but dockerized.",
   "version": "0.0.1",
   "main": "./built/server.js",
   "scripts": {
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eltik/M3U8-Proxy.git"
+    "url": "git+https://github.com/ZaoCoreLabs/M3U8-Proxy.git"
   },
   "author": "eltik",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Eltik/M3U8-Proxy/issues"
+    "url": "https://github.com/ZaoCoreLabs/M3U8-Proxy/issues"
   },
-  "homepage": "https://github.com/Eltik/M3U8-Proxy#readme",
+  "homepage": "https://github.com/ZaoCoreLabs/M3U8-Proxy#readme",
   "dependencies": {
     "axios": "^0.27.2",
     "colors": "^1.4.0",

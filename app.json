@@ -1,21 +1,21 @@
 {
     "name": "M3u8-Proxy",
-    "description": "Proxy m3u8 files through pure JavaScript.",
-    "website": "https://m3u8.eltik.net",
-    "repository": "https://github.com/Eltik/M3u8-Proxy",
-    "keywords": ["node", "express", "anime", "movies", "api", "m3u8", "streaming", "proxy"],
+    "description": "Proxy m3u8 files through pure  but dockerized.",
+    "website": "https://github.com/ZaoCoreLabs/M3U8-Proxy#readme",
+    "repository": "https://github.com/ZaoCoreLabs/M3u8-Proxy",
+    "keywords": ["node", "express", "anime", "movies", "api", "m3u8", "streaming", "proxy", "docker"],
     "env": {
         "PORT": {
-            "description": "Set PORT for the proxy to run on.",
+            "description": "Set PORT for the proxy to run on. No need to set this when using docker.",
             "value": "3000"
         },
         "HOST": {
-            "description": "Set HOST for the proxy to run on.",
+            "description": "Set HOST for the proxy to run on. No need to set this when using docker.",
             "value": "localhost"
         },
         "PUBLIC_URL": {
             "description": "Public URL for the proxy to run on.",
-            "value": "http://localhost:3000"
+            "value": "http://localhost:8080"
         }
     }
 }
