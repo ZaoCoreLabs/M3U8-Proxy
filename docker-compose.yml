@@ -6,7 +6,9 @@ services:
     image: ghcr.io/zaocorelabs/m3u8-proxy
     container_name: m3u8-proxy
     ports:
-      - "8080:8080"
+      - "9005:8080"
     environment:
-      - PUBLIC_URL="http://localhost:8080"
+      - HOST="localhost"
+      - PORT="8080"
+      - PUBLIC_URL="https://proxy.1ani.me"
     restart: unless-stopped
