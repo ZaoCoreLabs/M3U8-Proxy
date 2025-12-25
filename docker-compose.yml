@@ -8,7 +8,7 @@ services:
     ports:
       - "9005:8080"
     environment:
-      - HOST="localhost"
-      - PORT="8080"
-      - PUBLIC_URL="https://proxy.1ani.me"
+      - HOST=localhost
+      - PORT=8080
+      - PUBLIC_URL=https://proxy.1ani.me
     restart: unless-stopped

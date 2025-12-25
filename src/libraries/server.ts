@@ -667,6 +667,21 @@ export async function proxyTs(url: string, headers: any, req, res: http.ServerRe
     try {
         if (forceHTTPS) {
             const proxy = https.request(options, (r) => {
+                // Remove any upstream CORS headers to avoid duplicate values
+                [
+                    "access-control-allow-origin",
+                    "access-control-allow-methods",
+                    "access-control-allow-headers",
+                    "access-control-expose-headers",
+                    "access-control-max-age",
+                    "access-control-allow-credentials",
+                ].forEach((h) => {
+                    if (r.headers) {
+                        delete r.headers[h];
+                        delete r.headers[h.toUpperCase()];
+                    }
+                });
+
                 r.headers["content-type"] = "video/mp2t";
                 r.headers["Access-Control-Allow-Origin"] = "*";
                 r.headers["Access-Control-Allow-Methods"] = "*";
@@ -683,6 +698,21 @@ export async function proxyTs(url: string, headers: any, req, res: http.ServerRe
             });
         } else {
             const proxy = http.request(options, (r) => {
+                // Remove any upstream CORS headers to avoid duplicate values
+                [
+                    "access-control-allow-origin",
+                    "access-control-allow-methods",
+                    "access-control-allow-headers",
+                    "access-control-expose-headers",
+                    "access-control-max-age",
+                    "access-control-allow-credentials",
+                ].forEach((h) => {
+                    if (r.headers) {
+                        delete r.headers[h];
+                        delete r.headers[h.toUpperCase()];
+                    }
+                });
+
                 r.headers["content-type"] = "video/mp2t";
                 r.headers["Access-Control-Allow-Origin"] = "*";
                 r.headers["Access-Control-Allow-Methods"] = "*";
